@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useState } from 'react';
 
-type IndexModalType = 'SEASONS' | 'CIRCUITS' | null;
+type IndexModalType = 'SEASONS' | 'CALENDAR' | null;
 
 type ModalContextType = {
 	index: IndexModalType;
@@ -26,7 +26,7 @@ export function ModalContextProvider({ children }: ContextProviderProps) {
 	};
 
 	const openCircuitsModal = () => {
-		setIndexModal('CIRCUITS');
+		setIndexModal('CALENDAR');
 	};
 
 	const closeModal = () => {
