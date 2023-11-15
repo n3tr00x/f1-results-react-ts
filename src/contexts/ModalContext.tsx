@@ -40,9 +40,5 @@ export function ModalContextProvider({ children }: ContextProviderProps) {
 		closeModal,
 	};
 
-	return (
-		<ModalContext.Provider value={valueContext}>
-			{children}
-		</ModalContext.Provider>
-	);
+	return <ModalContext.Provider value={valueContext}>{children}</ModalContext.Provider>;
 }

@@ -42,7 +42,8 @@ export const Modal = function Modal({ children, isOpen, onClose }: ModalProps) {
 			ref={dialog}
 			className="w-full backdrop:backdrop-blur-xl"
 			onClick={handleCloseModal}
-			onClose={onClose}>
+			onClose={onClose}
+		>
 			{children}
 		</dialog>,
 		document.getElementById('modal')!,
