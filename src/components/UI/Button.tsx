@@ -1,11 +1,16 @@
-import { ReactNode } from 'react';
+import { ReactNode, ButtonHTMLAttributes } from 'react';
 
-type ButtonProps = { children: ReactNode };
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+	children: ReactNode;
+};
 
-export function Button({ children }: ButtonProps) {
+export function Button(props: ButtonProps) {
 	return (
-		<button className="rounded-md p-2 hover:bg-red-600 hover:shadow-md focus:bg-red-700 focus:shadow-md">
-			{children}
+		<button
+			{...props}
+			className="rounded-md p-2 outline-red-900 transition-colors hover:bg-red-600 active:bg-red-700 active:shadow-md"
+		>
+			{props.children}
 		</button>
 	);
 }
