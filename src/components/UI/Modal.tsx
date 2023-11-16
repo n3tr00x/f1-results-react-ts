@@ -40,7 +40,7 @@ export const Modal = function Modal({ children, isOpen, onClose }: ModalProps) {
 	return createPortal(
 		<dialog
 			ref={dialog}
-			className="animate-slide-up w-full rounded-md shadow backdrop:backdrop-blur-xl"
+			className="w-full max-w-[1200px] animate-slide-up rounded-md shadow backdrop:backdrop-blur-xl"
 			onClick={handleCloseModal}
 			onClose={onClose}
 		>
