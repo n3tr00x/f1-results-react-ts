@@ -5,13 +5,13 @@ type IndexModalType = 'SEASONS' | 'CALENDAR' | null;
 type ModalContextType = {
 	index: IndexModalType;
 	openSeasonsModal: () => void;
-	openCircuitsModal: () => void;
+	openCalendarModal: () => void;
 	closeModal: () => void;
 };
 
 export const ModalContext = createContext<ModalContextType>({
 	index: null,
-	openCircuitsModal: () => {},
+	openCalendarModal: () => {},
 	openSeasonsModal: () => {},
 	closeModal: () => {},
 });
@@ -25,7 +25,7 @@ export function ModalContextProvider({ children }: ContextProviderProps) {
 		setIndexModal('SEASONS');
 	};
 
-	const openCircuitsModal = () => {
+	const openCalendarModal = () => {
 		setIndexModal('CALENDAR');
 	};
 
@@ -36,7 +36,7 @@ export function ModalContextProvider({ children }: ContextProviderProps) {
 	const valueContext = {
 		index: indexModal,
 		openSeasonsModal,
-		openCircuitsModal,
+		openCalendarModal,
 		closeModal,
 	};
 
