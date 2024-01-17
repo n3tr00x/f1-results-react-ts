@@ -3,12 +3,14 @@ export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		fontFamily: {
-			'sans': ['montserrat-regular', 'sans-serif'],
+			'sans': ['f1-regular', 'sans-serif'],
 		},
 		extend: {
 			fontFamily: {
-				'mt-bold': ['montserrat-bold', 'sans-serif'],
-				'mt-italic': ['montserrat-italic', 'sans-serif'],
+				'f1-bold': ['f1-bold', 'sans-serif'],
+				'f1-italic': ['f1-italic', 'sans-serif'],
+				'f1-black': ['f1-black', 'sans-serif'],
+				'f1-regular': ['f1-regular', 'sans-serif'],
 			},
 			animation: {
 				'slide-up': 'fade-slide-up 0.3s ease-out forwards',

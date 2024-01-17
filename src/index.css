@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
 	font-family: 'montserrat-regular';
 	src:
 		url('/public/fonts/MontserratRegular.woff2') format('woff2'),
@@ -30,4 +30,40 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
+} */
+
+@font-face {
+	font-family: 'f1-italic';
+	src:
+		url('/public/fonts/f1-italic-webfont.woff2') format('woff2'),
+		url('/public/fonts/f1-italic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'f1-regular';
+	src:
+		url('/public/fonts/f1-regular-webfont.woff2') format('woff2'),
+		url('/public/fonts/f1-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'f1-bold';
+	src:
+		url('/public/fonts/f1-bold-webfont.woff2') format('woff2'),
+		url('/public/fonts/f1-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'f1-black';
+	src:
+		url('/public/fonts/f1-black-webfont.woff2') format('woff2'),
+		url('/public/fonts/f1-black-webfont.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
 }
