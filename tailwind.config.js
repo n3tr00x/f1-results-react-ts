@@ -14,6 +14,8 @@ export default {
 			},
 			animation: {
 				'slide-up': 'fade-slide-up 0.3s ease-out forwards',
+				bounce200: 'bounce 1s infinite 200ms',
+				bounce400: 'bounce 1s infinite 400ms',
 			},
 			keyframes: {
 				'fade-slide-up': {
