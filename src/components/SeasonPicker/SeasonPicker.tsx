@@ -1,7 +1,10 @@
+// components
+import { Modal } from '../UI/Modal';
+import { SeasonDropdown } from './SeasonDropdown';
+// contexts
+import { ModalContext } from '../../contexts/ModalContext';
+// hooks
 import { useContext } from 'react';
-import { Modal } from '../../UI/Modal';
-import { ModalContext } from '../../../contexts/ModalContext';
-import { SeasonPicker } from './SeasonPicker';
 
 export function SeasonPickerModal() {
 	const { index, closeModal } = useContext(ModalContext);
@@ -9,10 +12,10 @@ export function SeasonPickerModal() {
 	return (
 		<Modal isOpen={index === 'SEASONS'} onClose={closeModal}>
 			<div className="m-auto w-full max-w-lg p-6">
-				<h2 className="mb-3 text-center font-mt-bold text-2xl uppercase">
-					wybierz sezon
+				<h2 className="mb-3 text-center font-f1-bold text-2xl uppercase">
+					season
 				</h2>
-				<SeasonPicker />
+				<SeasonDropdown />
 			</div>
 		</Modal>
 	);
