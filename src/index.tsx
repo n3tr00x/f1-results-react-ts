@@ -9,6 +9,7 @@ import { F1SeasonContextProvider } from './contexts/F1SeasonContext';
 // components
 import { App } from './App.tsx';
 import { SeasonPicker } from './components/SeasonPicker/SeasonPicker';
+import { RaceCalendar } from './components/RaceCalendar/RaceCalendar';
 // main css file
 import './index.css';
 
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')!).render(
 				<F1SeasonContextProvider>
 					<App />
 					<SeasonPicker />
+					<RaceCalendar />
 				</F1SeasonContextProvider>
 			</ModalContextProvider>
 		</QueryClientProvider>
