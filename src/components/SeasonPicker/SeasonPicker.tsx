@@ -6,7 +6,7 @@ import { ModalContext } from '../../contexts/ModalContext';
 // hooks
 import { useContext } from 'react';
 
-export function SeasonPickerModal() {
+export function SeasonPicker() {
 	const { index, closeModal } = useContext(ModalContext);
 
 	return (
