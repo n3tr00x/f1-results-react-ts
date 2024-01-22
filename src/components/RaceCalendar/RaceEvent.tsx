@@ -37,12 +37,12 @@ export function RaceEvent({ details }: RaceEventProps) {
 				onClick={handleRaceEventClick}
 			>
 				<img
-					className="w-12 rounded-full border-slate-400 drop-shadow-xl sm:w-16"
+					className="w-12 rounded-full border-slate-400 drop-shadow-xl sm:w-16 lg:w-20"
 					src={nationFlag}
 					alt=""
 				/>
 				<div className="self-center">
-					<p className="text-[13px]">
+					<p className="text-[13px] lg:text-base">
 						<span className="font-f1-bold">{details.country}</span> (
 						{new Date(details.date).toLocaleDateString()})
 					</p>
