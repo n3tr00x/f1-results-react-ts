@@ -1,20 +1,16 @@
 import { ReactNode, createContext, useState } from 'react';
 
-type IndexModalType = 'SEASONS' | 'CALENDAR' | null;
+type IndexModalType = 'SEASONS' | 'CALENDAR' | 'STANDINGS' | null;
 
 type ModalContextType = {
 	index: IndexModalType;
 	openSeasonsModal: () => void;
 	openCalendarModal: () => void;
+	openStandingsModal: () => void;
 	closeModal: () => void;
 };
 
-export const ModalContext = createContext<ModalContextType>({
-	index: null,
-	openCalendarModal: () => {},
-	openSeasonsModal: () => {},
-	closeModal: () => {},
-});
+export const ModalContext = createContext<ModalContextType>(null!);
 
 type ContextProviderProps = { children: ReactNode };
 
@@ -29,6 +25,10 @@ export function ModalContextProvider({ children }: ContextProviderProps) {
 		setIndexModal('CALENDAR');
 	};
 
+	const openStandingsModal = () => {
+		setIndexModal('STANDINGS');
+	};
+
 	const closeModal = () => {
 		setIndexModal(null);
 	};
@@ -37,6 +37,7 @@ export function ModalContextProvider({ children }: ContextProviderProps) {
 		index: indexModal,
 		openSeasonsModal,
 		openCalendarModal,
+		openStandingsModal,
 		closeModal,
 	};
 
