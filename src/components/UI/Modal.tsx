@@ -15,9 +15,13 @@ export const Modal = function Modal({ children, isOpen, onClose }: ModalProps) {
 
 		if (isOpen) {
 			modal?.showModal();
+			document.body.classList.add('overflow-hidden');
 		}
 
-		return () => modal?.close();
+		return () => {
+			modal?.close();
+			document.body.classList.remove('overflow-hidden');
+		};
 	}, [isOpen]);
 
 	const handleCloseModal = (event: MouseEvent<HTMLDialogElement>) => {
@@ -40,7 +44,7 @@ export const Modal = function Modal({ children, isOpen, onClose }: ModalProps) {
 	return createPortal(
 		<dialog
 			ref={dialog}
-			className="w-full max-w-[1200px] animate-slide-up rounded-md shadow backdrop:backdrop-blur-xl"
+			className="max-h-[80vh] w-11/12 max-w-[1200px] animate-slide-up rounded-md shadow backdrop:backdrop-blur-xl"
 			onClick={handleCloseModal}
 			onClose={onClose}
 		>
