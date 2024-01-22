@@ -1,11 +1,14 @@
+// components
 import { Header } from './components/Header';
-import { SeasonPickerModal } from './components/modals/SeasonPicker';
+import { Results } from './components/Results/Results';
 
 export function App() {
 	return (
-		<>
+		<div className="lg:flex">
 			<Header />
-			<SeasonPickerModal />
-		</>
+			<main className="mx-4 max-w-screen-lg lg:relative lg:mx-auto lg:w-full lg:px-4">
+				<Results />
+			</main>
+		</div>
 	);
 }
