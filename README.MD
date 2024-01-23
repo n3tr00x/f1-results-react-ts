@@ -46,12 +46,10 @@ The application will be accessible at http://localhost:5173.
 
 ## Usage
 
-<div style="text-align: center">
-    <figure style="margin: 0">
-        <img src="presentation.gif" alt="Presentation of how application works.">
-        <figcaption>A short presentation of how the application works.<figcaption>
-    </figure>
-</div>
+<p align="center">
+    <img src="presentation.gif" alt="Presentation of how application works." />  
+    <p align="center">A short presentation of how the application works.</p>
+</p>
 
 ## Author
 
