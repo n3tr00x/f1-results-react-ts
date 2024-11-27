@@ -10,6 +10,10 @@ export function TableCell({ children, visibilityBreakpoint }: TableCellProps) {
 	const visibilityClass = getTableCellVisibilityClass(visibilityBreakpoint);
 
 	return (
-		<td className={`px-2 py-4 text-xs uppercase ${visibilityClass}`}>{children}</td>
+		<td
+			className={`whitespace-nowrap px-2 py-4 text-xs uppercase ${visibilityClass}`}
+		>
+			{children}
+		</td>
 	);
 }
